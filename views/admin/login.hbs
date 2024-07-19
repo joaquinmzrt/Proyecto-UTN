@@ -1,0 +1,20 @@
+<div class="container" style="margin-bottom: 375px;">
+  <div class="row">
+    <div class="col">
+      <form action="/admin/login" method="post">
+        <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <input type="text" class="form-control" id="usuario" placeholder="Usuario" name="usuario">
+        </div>
+        <div class="form-group" style="margin-top: 20px;">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+        </div>
+        <button style="border: 1px solid #ebebeb; color:black; background-color:#ebebeb; margin-top: 10px;" type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+      {{#if error}}
+      <p>Usuario o contraseña incorrecto</p>
+      {{/if}}
+    </div>
+  </div>
+</div>
