@@ -1,0 +1,28 @@
+<div class="content">
+  <div class="container" style="margin:250px auto">
+    <div class="row">
+      <div class="col-6 offset-3">
+        <h4 style="text-align: center;">AGREGAR UNA NUEVA NOVEDAD</h4>
+        <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+          <div class="form-group" style="margin-bottom: 15px;">
+            <input type="text" name="titulo" placeholder="Título" class="form-control">
+          </div>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <textarea class="form-control" placeholder="Subtítulo" name="subtitulo"></textarea>
+          </div>
+          <div class="form-group" style="margin-bottom: 10px;">
+            <textarea class="form-control" placeholder="Cuerpo" name="cuerpo"></textarea>
+          </div>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <label>Imagen<input type="file" name="imagen" id="imagen" class="form-control"></label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="border: 1px solid #ebebeb; color:black; background-color:#ebebeb;">Guardar</button>
+        </form>
+
+        {{#if error}}
+        <p>{{message}}</p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
